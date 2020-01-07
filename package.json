@@ -1,0 +1,35 @@
+{
+  "name": "booknote",
+  "version": "1.0.0",
+  "description": "A web app to keep track of summaries, quotes, and words from your favorite books!",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewwirtz/Booknote.git"
+  },
+  "author": "Matthew Wirtz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewwirtz/Booknote/issues"
+  },
+  "homepage": "https://github.com/matthewwirtz/Booknote#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.0.2",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
